@@ -1,6 +1,11 @@
 .about {
     font-size: 14pt;
 }
+#aboutTheRide {
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
 #gallery {
     display: none;
     position: relative;
