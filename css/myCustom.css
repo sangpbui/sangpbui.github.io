@@ -1,0 +1,23 @@
+.about {
+    font-size: 14pt;
+}
+#gallery {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+a {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.carousel-control:hover {
+	opacity: 0;
+	filter:alpha(opacity=0);
+}

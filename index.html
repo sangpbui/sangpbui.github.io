@@ -1,10 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>4K For Cancer</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4K for Cancer </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/myCustom.css" rel="stylesheet">
+  	 <link rel="stylesheet" type="text/css" href="js/gmaps/examples/examples.css" />
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <!-- google map -->	 
+  	 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	 <script src="js/gmaps/gmaps.js"></script>
+	 <script src="js/4k.js"></script>
 </head>
+
 <body>
-<h1> Hello, world</h1>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li>
+                <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>About Me</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>4K For Caner</h1>
+            <h3>You may have to fight a battle more than once to win it - Margaret Thatcher</h3>
+        </div>
+    </header>
+
+	 <!-- Main gallery -->
+	 <section id="gallery">
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <section class="item active text-center">
+                    <header class="text-center">
+                        <div class="text-vertical-center text-center">
+                            <h2> Missouri </h2>
+                        </div>
+                    </header>
+                    <div>
+                        <a>
+                            <img src="http://ecx.images-amazon.com/images/I/41IYG75SRKL._SX355_.jpg" style="width:170px; height:117px">
+                        </a>
+                        <a>
+                            <img src="http://ecx.images-amazon.com/images/I/41IYG75SRKL._SX355_.jpg" style="width:170px; height:117px">
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+	 </section>
+
+	 <!-- About the journey -->
+	 <section id="about" class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>About</h2>
+                    <h4>From <a href="http://newsletter.truman.edu/article.asp?id=16348">newsletter.truman.edu</a></h4>
+				    <p>
+                        "Sang Bui, a computer science major from Vietnam, will spend 70 days
+                        this summer bicycling across America to support young adults who are
+                        fighting cancer."
+                    </p>
+                    <br>
+                    <p>
+                        "The 4,000-mile journey will take Bui from Baltimore, Md., to Seattle, Wash.,
+                        in an effort to raise money for the Ulman Cancer Fund. Through donations,
+                        his goal is to raise at least $4,500 by May 31, but funds will be accepted
+                        through the end of the ride, Aug. 12"
+                    </p>
+                    <br>
+                    <p>
+                        Bui was inspired to participate in cross-country bike ride after working
+                        through some difficult personal times in the last year and coming across
+                        stories of young cancer survivors.
+                    </p>
+                    <br>
+                    <p>
+                        “Those stories not only inspired, but also motivated me to challenge myself every day,”
+                        Bui said. <strong> “That is why I want to reach out my hands to the young adults affected by cancer.” </strong>
+                    </p>
+
+                </div>
+			</div>
+		</div>
+	 </section>
+	 
+		<!-- Progress -->
+		<section class="about">
+			<div class="containter">
+				<div class="row">
+					<div class="span11 text-center">
+                        <h2>Bui's Progress</h2>
+						<div id="map"></div>
+					</div>
+				</div>	
+			</div>
+		</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Sang Bui</strong>
+                    </h4>
+                    <p>164 East Patterson Street
+                        <br>Kirksville, MO 63501</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (660) 234-5042</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:spb2163@truman.edu">spb2163@truman.edu</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sangpbui"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; sangbui2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- Gallery controlling script -->
+    <script src="js/jquery.js"></script>
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    </script>
+
 </body>
+
 </html>
