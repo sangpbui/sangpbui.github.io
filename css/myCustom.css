@@ -1,28 +1,93 @@
 .about {
     font-size: 14pt;
 }
+.preview {
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+}
+/*sample class contains yet to be updated blogs*/
+.sample {
+    height: 325px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 96px;
+    display: table;
+    background-size: 490px 325px;
+    background: url(../img/abstract.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: large;
+    margin-right: 2px;
+    margin-left: 2px;
+    color: whitesmoke;
+}
+
+.sample:hover {
+    opacity: 0.4;
+    color: black;
+}
+
+.md {
+    display: block;
+    position: relative;
+    width: 865px;
+    height: 658px;
+    background: url(../img/sang2.jpg) no-repeat center center scroll;
+    margin: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 60px;
+    font-family: 'El Messiri', sans-serif;
+    margin-bottom: 2px;
+}
+
+.startOfArticle::first-letter{
+    font-size: 300%;
+}
+.article p {
+    font-size: 19px;
+    line-height: 30px;
+    font-family: 'lato', Calibri, Arial, sans-serif;
+}
+
+.article h1 {
+    display: inline;
+    font-family: 'El Messiri', sans-serif;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.w3-content.w3-display-container{
+    max-width: 90%;
+}
+
 #aboutTheRide {
     padding-top: 10px;
     margin-top: 20px;
 }
 
 #gallery {
-    display: none;
+    /*display: none;*/
     position: relative;
     width: 100%;
     height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background-size: cover; 
+	 -o-background-size: cover;
+    padding-top: 2px;
+    padding-bottom: 40px;
 }
 
-a {
-	display: inline-block;
-	padding-left: 10px;
-	padding-right: 10px;
+footer {
+    padding-top: 30px;
 }
-.carousel-control:hover {
-	opacity: 0;
-	filter:alpha(opacity=0);
-}
+

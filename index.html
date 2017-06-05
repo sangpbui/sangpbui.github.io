@@ -17,15 +17,19 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="css/myCustom.css" rel="stylesheet">
-  	 <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri:600" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
@@ -59,85 +63,132 @@
     </header>
 
 	 <!-- Main gallery -->
-	 <section id="gallery">
-	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-                <section class="item active text-center">
-                    <header class="text-center">
-                        <div class="text-vertical-center text-center">
-                            <h2> Missouri </h2>
-                        </div>
-                    </header>
-                    <div>
-                        <a>
-                            <img src="http://ecx.images-amazon.com/images/I/41IYG75SRKL._SX355_.jpg" style="width:170px; height:117px">
-                        </a>
-                        <a>
-                            <img src="http://ecx.images-amazon.com/images/I/41IYG75SRKL._SX355_.jpg" style="width:170px; height:117px">
-                        </a>
-                    </div>
-                </section>
-
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              <span class="sr-only">Next</span>
-            </a>
+    <div class="container-fluid" id="gallery">
+        <div class="w3-center w3-container w3-section w3-xlarge w3-display-middle" style="width:100%">
+            <div class="w3-left w3-hover-text-khaki w3-xxxlarge" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki w3-xxxlarge" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent" onclick="currentDiv(2)"></span>
         </div>
 
-	 </section>
+         <div class="w3-content w3-display-container">
 
-	 <!-- About the journey -->
-	 <section id="aboutTheRide" class="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h2>About The Bike Ride</h2>
-                    <h4>From <a href="http://newsletter.truman.edu/article.asp?id=16348">newsletter.truman.edu</a></h4>
-				    <p>
-                        "Sang Bui, a computer science major from Vietnam, will spend 70 days
-                        this summer bicycling across America to support young adults who are
-                        fighting cancer."
-                    </p>
-                    <br>
-                    <p>
-                        "The 4,000-mile journey will take Bui from Baltimore, Md., to Seattle, Wash.,
-                        in an effort to raise money for the Ulman Cancer Fund. Through donations,
-                        his goal is to raise at least $4,500 by May 31, but funds will be accepted
-                        through the end of the ride, Aug. 12"
-                    </p>
-                    <br>
-                    <p>
-                        Bui was inspired to participate in cross-country bike ride after working
-                        through some difficult personal times in the last year and coming across
-                        stories of young cancer survivors.
-                    </p>
-                    <br>
-                    <p>
-                        “Those stories not only inspired, but also motivated me to challenge myself every day,”
-                        Bui said. <strong> “That is why I want to reach out my hands to the young adults affected by cancer.” </strong>
-                    </p>
+             <div class="mySlides">
+                 <h1 class="text-center md"> Maryland </h1>
 
+                 <div class="container-fluid bg-3 text-center">
+                    <ul class="grid cs-style-3">
+                        <li>
+                            <figure>
+                                <img src="img/sang.jpg" alt="img04">
+                                <figcaption>
+                                    <h3>Leaving Kirksville</h3>
+                                    <span>Sang Bui</span>
+                                    <a href="blog.html#leavingKv">Take a look</a>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/abstract.jpg" alt="img04">
+                                <figcaption>
+                                    <h3>To be updated</h3>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                 </div>
+                 <br>
+             </div>
+
+
+             <div class="mySlides">
+                 <img src="img/callout.jpg" style="width:100%">
+             </div>
+
+         </div>
+
+         <!--About the journey-->
+        <div id="aboutTheRide" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="text-center">About The Bike Ride</h2>
+                        <h4>From <a href="http://newsletter.truman.edu/article.asp?id=16348">newsletter.truman.edu</a></h4>
+                        <p>
+                            "Sang Bui, a computer science major from Vietnam, will spend 70 days
+                            this summer bicycling across America to support young adults who are
+                            fighting cancer."
+                        </p>
+                        <br>
+                        <p>
+                            "The 4,000-mile journey will take Bui from Baltimore, Md., to Seattle, Wash.,
+                            in an effort to raise money for the Ulman Cancer Fund. Through donations,
+                            his goal is to raise at least $4,500 by May 31, but funds will be accepted
+                            through the end of the ride, Aug. 12"
+                        </p>
+                        <br>
+                        <p>
+                            Bui was inspired to participate in cross-country bike ride after working
+                            through some difficult personal times in the last year and coming across
+                            stories of young cancer survivors.
+                        </p>
+                        <br>
+                        <p>
+                            “Those stories not only inspired, but also motivated me to challenge myself every day,”
+                            Bui said. <strong> “That is why I want to reach out my hands to the young adults affected by cancer.” </strong>
+                        </p>
+
+                    </div>
                 </div>
-			</div>
-		</div>
-	 </section>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <h4><strong>Sang Bui</strong>
+                        </h4>
+                        <p>164 East Patterson Street
+                            <br>Kirksville, MO 63501</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-phone fa-fw"></i> (660) 234-5042</li>
+                            <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:spb2163@truman.edu">spb2163@truman.edu</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://ulmanfund.org/yoursupport/"><i class="fa fa-question-circle fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://ulman.z2systems.com/sang-bui"><i class="fa fa-credit-card fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https:www.facebook.com/phuocsangbui"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/sangaritaz"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/sangpbui"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; sangbui2017</p>
+                    </div>
+                </div>
+            </div>
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        </footer>
+    </div>
+
 	 
 		<!-- Progress -->
-		<section class="aboutl" style="display: none;">
+		<section class="about" style="display: none;">
 			<div class="containter">
 				<div class="row">
 					<div class="span11 text-center">
@@ -148,99 +199,89 @@
 			</div>
 		</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Sang Bui</strong>
-                    </h4>
-                    <p>164 East Patterson Street
-                        <br>Kirksville, MO 63501</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (660) 234-5042</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:spb2163@truman.edu">spb2163@truman.edu</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="http://ulmanfund.org/yoursupport/"><i class="fa fa-question-circle fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://ulman.z2systems.com/sang-bui"><i class="fa fa-credit-card fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/sangpbui"><i class="fa fa-github fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; sangbui2017</p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
 
     <!-- Gallery controlling script -->
     <script src="js/jquery.js"></script>
-    
-
-    <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-
+    <script src="js/toucheffects.js"></script>
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+        // control gallery slider
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " w3-white";
+        }
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
     </script>
 
 </body>
