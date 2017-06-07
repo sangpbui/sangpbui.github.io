@@ -1,6 +1,12 @@
 .about {
     font-size: 14pt;
 }
+
+.carousel-inner#orientation {
+    width:100%;
+    max-height: 200px;
+}
+
 .preview {
     text-align: center;
     visibility: hidden;
@@ -50,6 +56,11 @@
 .startOfArticle::first-letter{
     font-size: 300%;
 }
+
+.article {
+    padding-top: 40px;
+}
+
 .article p {
     font-size: 19px;
     line-height: 30px;

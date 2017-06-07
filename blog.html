@@ -23,13 +23,37 @@
     <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li>
+                <a href="index.html" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#top" onclick=$("#menu-close").click();>Top</a>
+            </li>
+            <li>
+                <a href="#leavingKv" onclick=$("#menu-close").click();>Leaving KV</a>
+            </li>
+            <li>
+                <a href="#orientation" onclick=$("#menu-close").click();>Orientation</a>
+            </li>
+            <li>
+                <a href="#harborYork" onclick=$("#menu-close").click();>Inner Harbor - York</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--main content-->
     <div class="container-fluid">
         <br>
         <div class="article" id="leavingKv">
-            <div class="col-sm-1 col-md-3">
+            <div class="col-md-3">
                 <img src="img/sang.jpg" style="max-height: 500px; max-width: 300px">
             </div>
-            <div class="col-xs-6 col-md-6 col-lg-8">
+            <div class="col-md-6 col-lg-8">
                 <h1> Leaving Kirksville <small> Jun 5, 2017</small></h1>
                 <br>
                 <br>
@@ -83,11 +107,71 @@
                     Cars are everywhere and especially the people - never have I seen so many - Latinos ******** airport,
                     they are everywhere, at the checked bag station, driving golf carts, security guards, cafeteria, you name it!
                     Seeing this really encourages me to learn Spanish. I tried, not very much, but I could probably say something by the time I’m 30 - that’s my goal.
-
                 </p>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
 
+        <!--Orientation-->
+        <div class="article" id="orientation">
+            <h1> Orientation <small> Jun 5, 2017</small></h1>
+            <br>
+            <br>
+            <ul class="grid">
+                <li>
+                    <figure>
+                        <img src="img/Orientation/orientation.jpg">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/Orientation/orientation2.jpg" alt="">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/Orientation/orientation3.jpg" alt="">
+                    </figure>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--Inner Harbor to York-->
+        <div class="article" id="harborYork">
+            <h1> Inner Harbor - York <small> Jun 5, 2017</small></h1>
+            <br>
+            <ul class="grid">
+                <li>
+                    <figure>
+                        <img src="img/Pennsylvania/harbor.png" alt="img04">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/Pennsylvania/harbor2.jpg" alt="img04">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/Pennsylvania/harbor3.jpg" alt="img04">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/Pennsylvania/harbor4.jpg" alt="img04">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/Pennsylvania/harbor5.jpg" alt="img04">
+                    </figure>
+                </li>
+            </ul>
+        </div>
 
 
 
@@ -131,5 +215,61 @@
             <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
         </footer>
     </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/toucheffects.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
