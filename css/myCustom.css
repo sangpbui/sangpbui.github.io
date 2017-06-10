@@ -1,3 +1,22 @@
+.article {
+    padding-top: 40px;
+}
+
+.article p {
+    font-size: 19px;
+    line-height: 30px;
+    font-family: 'lato', Calibri, Arial, sans-serif;
+}
+
+.article h1 {
+    display: inline;
+    font-family: 'El Messiri', sans-serif;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
 .about {
     font-size: 14pt;
 }
@@ -5,6 +24,11 @@
 .carousel-inner#orientation {
     width:100%;
     max-height: 200px;
+}
+
+.carousel-control {
+	background: none !important;
+	color: black;
 }
 
 .preview {
@@ -57,25 +81,6 @@
     font-size: 300%;
 }
 
-.article {
-    padding-top: 40px;
-}
-
-.article p {
-    font-size: 19px;
-    line-height: 30px;
-    font-family: 'lato', Calibri, Arial, sans-serif;
-}
-
-.article h1 {
-    display: inline;
-    font-family: 'El Messiri', sans-serif;
-    background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-}
-
 .w3-content.w3-display-container{
     max-width: 90%;
 }
@@ -94,7 +99,7 @@
     -moz-background-size: cover;
     background-size: cover; 
 	 -o-background-size: cover;
-    padding-top: 2px;
+    padding-top: 3em;
     padding-bottom: 40px;
 }
 
