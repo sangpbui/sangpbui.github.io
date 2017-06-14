@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Progress </title>
+    <style type="text/css">
+        body {
+            color: #5d5d5d;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Specific mapael css class are below
+         * 'mapael' class is added by plugin
+        */
+
+        .mapael .map {
+            position: relative;
+        }
+
+        .mapael .mapTooltip {
+            position: absolute;
+            background-color: #fff;
+            moz-opacity: 0.70;
+            opacity: 0.70;
+            filter: alpha(opacity=70);
+            border-radius: 10px;
+            padding: 10px;
+            z-index: 1000;
+            max-width: 200px;
+            display: none;
+            color: #343434;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
+    <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
+    <script src="../../js/maps/france_departments.js" charset="utf-8"></script>
+    <script src="../../js/maps/world_countries.js" charset="utf-8"></script>
+    <script src="../../js/maps/usa_states.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".mapcontainer").mapael({
+                map: {
+                    name: "usa_states",
+                    defaultArea: {
+                        attrs: {
+                            fill: "#f4f4e8"
+                            , stroke: "#ced8d0"
+                        }
+                    },
+                    zoom: {
+                        enabled: true,
+                        mousewheel: true,
+                        animDuration: 350
+                    }
+                    // Default attributes can be set for all links
+                    , defaultLink: {
+                        factor: 0.4
+                        , attrsHover: {
+                            stroke: "#a4e100"
+                        }
+                    }
+                    , defaultPlot: {
+                        text: {
+                            attrs: {
+                                fill: "#000"
+                            },
+                            attrsHover: {
+                                fill: "#000"
+                            }
+                        }
+                    }
+                },
+                plots: {
+                    'innerHarbor': {
+                        latitude: 39.315642,
+                        longitude: -76.618421,
+                        tooltip: {content: "InnerHarbor<br />"}
+                    },
+                    'york': {
+                        latitude: 39.961813,
+                        longitude: -76.730890,
+                        tooltip: {content: "York<br />"}
+                    },
+                    'shippensburg': {
+                        latitude: 40.0473061,
+                        longitude: -77.5329152,
+                        tooltip: {content: "Shippensburg<br />"}
+                    },
+                    'stateCollege': {
+                        latitude: 40.7880131,
+                        longitude: -77.8701239,
+                        tooltip: {content: "State College<br />"}
+                    },
+                    'stMary': {
+                        latitude: 41.4567397,
+                        longitude: -78.6042725,
+                        tooltip: {content: "St. Marys<br />"}
+                    },
+                    'oilCity': {
+                        latitude: 41.4261566,
+                        longitude: -79.7208529,
+                        tooltip: {content: "Oil City<br />"}
+                    },
+                    'warren': {
+                        latitude: 41.2415012,
+                        longitude: -80.8523445,
+                        tooltip: {content: "Warren OH<br />"}
+                    },
+                    'cleveland': {
+                        latitude: 41.4949212,
+                        longitude: -81.7760709,
+                        tooltip: {content: "Cleveland<br />"}
+                    },
+                    'mansfield': {
+                        latitude: 40.7661697,
+                        longitude: -82.5938505,
+                        tooltip: {content: "Mansfield<br />"}
+                    }
+                },
+                // Links allow you to connect plots between them
+                links: {
+
+                    'harborToYork': {
+                        // ... Or with IDs of plotted points
+                        factor: -0.4
+                        , between: ['innerHarbor', 'york']
+                        , attrs: {
+                            "stroke-width": 1
+                        }
+                        , tooltip: {content: "Inner Harbor - York"}
+                    },
+                    'yorkToShippensburg': {
+                        // ... Or with IDs of plotted points
+                        factor: -0.3
+                        , between: ['york', 'shippensburg']
+                        , attrs: {
+                            "stroke-width": 1
+                        }
+                        , tooltip: {content: "York - Shippensburg"}
+                    }
+
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<div class="container">
+
+    <h1> My Progress </h1>
+
+    <div class="mapcontainer">
+        <div class="map" style="padding-left: 12em;">
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
