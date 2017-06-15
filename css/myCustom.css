@@ -41,6 +41,11 @@
 	color: black;
 }
 
+.discussParent {
+    text-align:center;
+    width:100%;
+}
+
 .preview {
     text-align: center;
     visibility: hidden;
@@ -98,6 +103,11 @@
 #aboutTheRide {
     padding-top: 10px;
     margin-top: 20px;
+}
+
+#disqus_thread {
+    padding-left: 30em;
+    padding-right: 30em;
 }
 
 #gallery {
