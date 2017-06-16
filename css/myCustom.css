@@ -41,6 +41,13 @@
 	color: black;
 }
 
+.card {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: white;
+    border-radius: 25px;
+}
+
 .discussParent {
     text-align:center;
     width:100%;

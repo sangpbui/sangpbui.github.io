@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -64,8 +65,113 @@
 
 	 <!-- Main gallery -->
     <div class="container-fluid" id="gallery">
+        <div class="jumbotron">
+            <h1 class="display-4"> Headlines </h1>
+            <p class="lead">Stay up-to-date with my journey</p>
+            <hr class="my-4">
+            <ul class="grid" style="list-style-type:none; display:inline-block;">
+                <li>
+                    <div class="card card-outline-primary" style="width: 40rem;">
+                        <div class="card-block">
+                            <h3 class="card-title">Dedication Form <span class="badge badge-default">New</span></h3>
+                            <p class="lead">
+                                Everyday, the team has a dedication circle
+                                which each rider dedicates the ride to a person 
+                                who has been affected from cancer.
+                                If you know anyone in your family, friends, 
+                                or just anyone that you would like me to dedicate 
+                                my ride to; please send me the name and a quick 
+                                introduction of that person. 
+                            </p>
+                            <a href="https://drive.google.com/open?id=1RlH8LFWr5ZFp1Kkp2l9TKGyAU2ysd1rtaq0tCHFcbNQ" class="btn btn-primary">Go</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card card-outline-primary" style="width: 40rem;">
+                        <div class="card-block">
+                            <h3 class="card-title"> Dedication List  <span class="badge badge-default">New</span></h3>
+                            <p class="lead"> This journey is dedicated to those affected by cancer and their families </p>
+                            <br><br><br><br><br><br><br><br>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                View
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" id="exampleModalLabel">Dedication List</h2>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <h3> Sadie Cash </h3>
+                                                <p> My mother-in-law, who died of cancer</p>
+                                                <h6>anonymous</h6>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h3> Kraig Keller </h3>
+                                                <p> Kraig Keller was an alumni of Northeast Missouri State University, 
+                                                    now Truman State University. He fathered 3 children with his wife, 
+                                                    Diane Rumbo: Korbin, Braden, and Ashlyn Keller before he passed away 
+                                                    from colon cancer in 2002. He was a loving husband, brother, son, and father 
+                                                </p>
+                                                <h6>Korbin Keller</h6>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h3> Nancy Vieker (pronounced "Vee-ker") </h3>
+                                                <p> Nancy was my grandma and an ovarian cancer survivor. 
+                                                    She and Grandpa had planned to bike across the USA over 
+                                                    three successive summers, 1/3 of the country at a time. 
+                                                    For two summers, they did so. Unfortunately, on October 27, 1998, 
+                                                    Grandma was killed in a car accident. The following summer, Grandpa 
+                                                    finished their ride alone.</p>
+                                                <h6>Jonathan Vieker</h6>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h3> James Ashcraft </h3>
+                                                <p> He was my father </p>
+                                                <h6> Mike Ashcraft</h6>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h3> Stoney Matteson </h3>
+                                                <p> My husband is the year three following treatment 
+                                                    for advanced stage lung cancer, which as a non-smoker 
+                                                    came as a complete shock. He is doing well, thanks to the 
+                                                    advances that research has provided.  </p>
+                                                <h6> Polly Matteson </h6>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <h3> Marilyn Vogt </h3>
+                                                <p> Please dedicate a portion if your journey to Marilyn Vogt. 
+                                                    This is my wife's mother, who passed away from adeno carcinoma 
+                                                    in 2007 at age 74. The cancer was pervasive through her entire 
+                                                    torso and moved so quickly...she was gone a mere 30 days after it was discovered. 
+                                                    My wife Mary still feels the sting of this loss every day. 
+                                                    Thank you and your colleagues for undertaking this journey. </p>
+                                                <h6>anonymous</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end modal-->
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
-         <div id="myCarousel" class="carousel slide">
+        </div>
+         
+        <div id="myCarousel" class="carousel slide">
             <div class="carousel-inner">
                 <!--first item-->
                 <div class="item active">
@@ -204,7 +310,7 @@
              <br>
          </div>
 
-        <div class="col-lg-7 col-md-5 row fa-align-center" style="width: 90%; height: 60%; overflow: hidden; padding-left:8em">
+        <div class="col-lg-7 col-md-5 row fa-align-center" style="width: 90%; height: 70%; overflow: hidden; padding-left:8em">
             <iframe src="jQueryMapael/examples/advanced/links_between_plotted_cities.html" style="border: hidden; max-width: 100%; max-height: 100%; width: 100em; height: 190em;">
 
             </iframe>
