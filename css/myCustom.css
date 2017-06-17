@@ -48,6 +48,10 @@
     border-radius: 25px;
 }
 
+li image {
+    max-height: 360px;
+}
+
 .discussParent {
     text-align:center;
     width:100%;
@@ -113,8 +117,8 @@
 }
 
 #disqus_thread {
-    padding-left: 30em;
-    padding-right: 30em;
+    padding-left: 20em;
+    padding-right: 20em;
 }
 
 #gallery {
