@@ -6,6 +6,7 @@
     <style type="text/css">
         body {
             color: #5d5d5d;
+            background-color: #00a1fe;
             font-family: Helvetica, Arial, sans-serif;
         }
 
@@ -16,7 +17,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
         }
 
@@ -66,7 +67,7 @@
                     zoom: {
                         //enabled: true,
                         // mousewheel: true,
-                        animDuration: 350
+                        animDuration: 450
                     }
                     // Default attributes can be set for all links
                     , defaultLink: {
@@ -156,6 +157,12 @@
                         latitude: 42.7087864,
                         longitude: -84.6290717,
                         tooltip: {content: "Day 15: Ann Arbor - Lansing<br />"}
+                    },
+                    'seattle': {
+                        latitude: 47.599571,
+                        longitude: -122.319426,
+                        tooltip: {content: "Seattle"},
+                        value: [150000, 2000]
                     }
                 },
                 // Links allow you to connect plots between them
@@ -164,22 +171,12 @@
                     'harborToYork': {
                         // ... Or with IDs of plotted points
                         factor: -0.4
-                        , between: ['innerHarbor', 'york']
+                        , between: ['innerHarbor', 'seattle']
                         , attrs: {
-                            "stroke-width": 1
+                            "stroke-width": 4
                         }
                         , tooltip: {content: "Inner Harbor - York"}
-                    },
-                    'yorkToShippensburg': {
-                        // ... Or with IDs of plotted points
-                        factor: -0.3
-                        , between: ['york', 'shippensburg']
-                        , attrs: {
-                            "stroke-width": 1
-                        }
-                        , tooltip: {content: "York - Shippensburg"}
                     }
-
                 }
             });
         });
@@ -190,7 +187,7 @@
 <body>
 <div class="container" style="text-align:center">
 
-    <h1 style="padding-left:10em"> My Progress </h1>
+    <h1 style="color: whitesmoke"> My Progress </h1>
     <br>
     <br>
     <div class="mapcontainer">
