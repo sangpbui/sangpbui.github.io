@@ -113,6 +113,10 @@ li image {
     margin-bottom: 2px;
 }
 
+#myCarousel {
+    /*background-color: #10789f;*/
+}
+
 .startOfArticle::first-letter{
     font-size: 300%;
 }
