@@ -67,6 +67,19 @@ li image {
     width:100%;
 }
 
+header p {
+    display:inline-block;
+    background-color: #1b6d85;
+    font-size: 2em;
+    color: whitesmoke;
+    opacity: 0.9;
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-bottom: 2em;
+    padding-bottom: 1em;
+    text-align: justify;
+}
+
 .preview {
     text-align: center;
     visibility: hidden;
@@ -152,7 +165,7 @@ li image {
     font-family: 'El Messiri', sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-	 font-size: 4em;
+    font-size: 4em;
 }
 
 footer {
