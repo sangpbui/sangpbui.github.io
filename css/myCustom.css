@@ -73,8 +73,8 @@ header p {
     font-size: 2em;
     color: whitesmoke;
     opacity: 0.9;
-    padding-left: 6em;
-    padding-right: 6em;
+    padding-left: 20%;
+    padding-right: 20%;
     padding-bottom: 2em;
     padding-bottom: 1em;
     text-align: justify;
@@ -170,5 +170,35 @@ header p {
 
 footer {
     padding-top: 30px;
+}
+
+@media screen and (min-width: 480px) {
+	header p {
+    	display:inline-block;
+    	background-color: #1b6d85;
+    	font-size: 2em;
+    	color: whitesmoke;
+    	opacity: 0.9;
+    	padding-left: 10%;
+    	padding-right: 10%;
+    	padding-bottom: 2em;
+    	padding-bottom: 1em;
+    	text-align: justify;
+	}
+}
+
+@media screen and (min-width: 280px) {
+	header p {
+    	display:inline-block;
+    	background-color: #1b6d85;
+    	font-size: 1em;
+    	color: whitesmoke;
+    	opacity: 0.9;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	padding-bottom: 2em;
+    	padding-bottom: 1em;
+    	text-align: justify;
+	}
 }
 
